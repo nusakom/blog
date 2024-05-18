@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/blog/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/blog/css/main.css">
+
+
+<link rel="stylesheet" href="/blog/lib/font-awesome/css/all.min.css">
+  
+  <link rel="stylesheet" href="/blog/lib/animate-css/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"rcore-os.github.io","root":"/blog/","scheme":"Muse","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}}};
+  </script>
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="rcore-os Blog">
+<meta property="og:url" content="http://rcore-os.github.io/blog/page/26/index.html">
+<meta property="og:site_name" content="rcore-os Blog">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="rcore-os Group">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://rcore-os.github.io/blog/page/26/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+
+  <title>rcore-os Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <main class="main">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line toggle-line-first"></span>
+        <span class="toggle-line toggle-line-middle"></span>
+        <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/blog/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">rcore-os Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/blog/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/blog/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">rcore-os Group</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/blog/archives/">
+        
+          <span class="site-state-item-count">383</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/blog/categories/">
+          
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/blog/tags/">
+          
+        <span class="site-state-item-count">397</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </header>
+
+      
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+      <div class="main-inner">
+        
+
+        <div class="content index posts-expand">
+          
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2023/11/04/2023%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93%E6%8A%A5%E5%91%8A-tianpingan/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2023/11/04/2023%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93%E6%8A%A5%E5%91%8A-tianpingan/" class="post-title-link" itemprop="url">2023开源操作系统训练营第二阶段总结报告-tianpingan.md</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-11-04 00:00:00" itemprop="dateCreated datePublished" datetime="2023-11-04T00:00:00+00:00">2023-11-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-05-18 13:08:58" itemprop="dateModified" datetime="2024-05-18T13:08:58+00:00">2024-05-18</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="2023rCore-训练营第二阶段总结"><a href="#2023rCore-训练营第二阶段总结" class="headerlink" title="2023rCore 训练营第二阶段总结"></a>2023rCore 训练营第二阶段总结</h1><p>参加本次rcore训练营的原因是希望找人和我一起写课程来督促我成长，因为本人做事很容易烂尾。</p>
+<p>之前做过类似的操作系统lab，并且也用过rust，所以前三个实验还是比较顺利完成了，这次报名也是希望能进一步参与后面的项目。</p>
+<p>下面简单总结一下在第二阶段我完成的各个实验情况。</p>
+<h2 id="ch3"><a href="#ch3" class="headerlink" title="ch3"></a>ch3</h2><p>rcore 的前几个实验难度不是很大，读懂代码结构，按照需求去实现就行了。</p>
+<p>本次实验在要实现一个当前任务信息查询调用。</p>
+<p>而这个系统调用sys_task_info调用的实现建立在对TaskManager的修改的基础上。</p>
+<p>我们只需要在TaskManagerInner中的TaskControlBlock里添加syscall_times来统计该任务的各个系统调用次数的统计，并在系统调用时，以及任务切换时进行相应数据的修改就行了。</p>
+<h2 id="ch4"><a href="#ch4" class="headerlink" title="ch4"></a>ch4</h2><p>本次实验是在有了分页机制的前提下，重写了ch3中的sys_write和sys_task_info。</p>
+<p>由于我们引入了虚拟存储机制，所以要把数据写到任务地址空间需要根据我们的页表得到其实际物理地址再写入。mmp与munmap都已在memroy_set中帮我们实现，我们只需要简单封装一下即可，同时我们要注意访问权限的管理。</p>
+<h2 id="ch5"><a href="#ch5" class="headerlink" title="ch5"></a>ch5</h2><p>本次实验任务简单，spawn一个新任务就是创建一个空白子进程然后加载对应程序即可，</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>通过这个阶段的学习，我巩固和掌握了很多操作系统的知识，并且在实践中得到了很大的收益。</p>
+<p>实验的逐步进行让我能够在已经写好的代码基础上增加对系统的理解并进行修改，从而使我的思维得到不断蜕变。此外，采用增加功能的实验方式让我感觉像在编写自己的操作系统，因此更加认真地学习，从中获取更多知识，并得到积极的反馈。</p>
+<p>此外，第二阶段的实践使我的 Rust 编程技能得到了进一步提升。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2023/11/03/rcore%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93-LiuZhetan/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2023/11/03/rcore%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93-LiuZhetan/" class="post-title-link" itemprop="url">rcore学习总结-LiuZhetan</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-11-03 23:04:53" itemprop="dateCreated datePublished" datetime="2023-11-03T23:04:53+00:00">2023-11-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-05-18 13:08:58" itemprop="dateModified" datetime="2024-05-18T13:08:58+00:00">2024-05-18</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="前二阶段学习感受"><a href="#前二阶段学习感受" class="headerlink" title="前二阶段学习感受"></a>前二阶段学习感受</h2><h3 id="Rust"><a href="#Rust" class="headerlink" title="Rust"></a>Rust</h3><p>Rust吸引我的地方在：于相较于C语言，Rust提供了高级别的抽象和语法糖并且不会带来额外的性能开销；相较于C++虽然上手难度较高，但是C++更难熟练掌握和精通。此外Rust的官方教程非常不错，使用Cargo方便地发布和管理包使得Rust相比C++更加“现代化”。Rust的学习曲线比较陡峭，以至于需要把整本《Rust 程序设计语言》看完后才能正确地写出规模比较大的程序。所有权机制像是默认实现的C++的移动语义，这一点和我之前接触过的大部分语言都不一样。引用和生命周期有时相当折磨，比如最开始写程序的时候容易犯的一个错误是在函数内部创建一个变量然后返回它的引用，不过这种方式本来也十分危险，因为，假如使用C++，如果不设计好析构函数就非常容易引发内存泄漏，而在Rust中这中问题在编译器就解决了。虽然Rust一开始写比较痛苦，但编译器更像是以为老师去纠正错误。</p>
+<h3 id="Rcore"><a href="#Rcore" class="headerlink" title="Rcore"></a>Rcore</h3><p>作为一个使用Rust写的OS内核，通过阅读Rcore代码能很好的锻炼我的rust功底，rcore-tutorial-book给出了非常详细的讲解，不得不令人称赞。</p>
+<p>这是我第二次做lab，但是第一次正式参加训练营。从现在来看Rcore的编程题其实整体的难度不大，每个lab需要修改的代码整体不超过400行，不过想要快速地完成lab还是需要对代码比较熟悉，结合自己的经历，我认为0基础能一个月之内完成5个lab算是比较快了。因为前置的一些技能也需要花一些时间，我一开始学习时rcore在正式开始看代码之前还花了一周左右的时间学习Makefile、GUN Linker、Risc v规范，如果有相关的基础会快很多。</p>
+<p>对于前3个lab，本次训练营花费了10天完成。其中个人认为难度比较大一点的时munmap系统调用的实现。这里我在第一次做lab的时候想用区间树实现快捷的区间查询操作，我参考了《算法导论》手写了红黑树并期望在此基础上实现最终的区间树，但是除了一些bug就被鸽了。不过这次我使用了crates.io上的一个包iset，很方便地实现了区间查找，同时从iset的源码中一窥优秀的rust代码是怎么写的。</p>
+<p>截至11.3，成功上传了前3个lab的代码并获得了300分，剩下的两个lab还需继续完成。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2023/11/03/2023%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E6%80%BB%E7%BB%93%E6%8A%A5%E5%91%8A-ftq/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2023/11/03/2023%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E6%80%BB%E7%BB%93%E6%8A%A5%E5%91%8A-ftq/" class="post-title-link" itemprop="url">2023开源操作系统训练营总结报告-ftq</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-11-03 22:20:01" itemprop="dateCreated datePublished" datetime="2023-11-03T22:20:01+00:00">2023-11-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-05-18 13:08:58" itemprop="dateModified" datetime="2024-05-18T13:08:58+00:00">2024-05-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/report/" itemprop="url" rel="index"><span itemprop="name">report</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+           <a id="more"></a>
+
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在朋友推荐下报名了这个训练营，现在过了差不多一个月感觉收获颇丰。虽然我本科专业是电子信息的，但我一直对计算机方面还有操作系统的知识很感兴趣，所以就开始了这段学习之旅。以下就是我这两个阶段以来的一些总结及感悟。</p>
+<h1 id="第一阶段"><a href="#第一阶段" class="headerlink" title="第一阶段"></a>第一阶段</h1><p>一开始先是rust的语法学习，以前并没有接触过rust，很多github和linux上的操作也不太懂，导致浪费了很多时间。  之后听完直播课老师的讲解，听完后再就开始看<a href="https://course.rs/about-book.html" target="_blank" rel="noopener">Rust语言圣经</a>和相关资料开始学习rust的语法。在一开始，就是先看一段然后在rustlings上做相关类型的题，到了中间题变难了一些，有几道题看半天代码和圣经也找不到头绪，只能hint。在之后就发现我的策略上一个大的问题，因为我看书是按书本身的顺序看的，所以当时做到rustlings里面的那些不按顺序的题我都看了半天，比如error那些专题的题目我在上面翻了半天也找不到相关内容，然后又是通过hint和rust官方的库来了解相关做法，所以又浪费了很多时间。分析之后为找到了正确的决策：按照rustlings的专题来看知识点，做完一个专题后就先去了解下一个专题的知识点，看到自己大概有信心能写的时候再开始做题，一步一个脚印稳扎稳打的前进。最后也是用这样的方法成功地做完了所有的题目。</p>
+<h1 id="第二阶段"><a href="#第二阶段" class="headerlink" title="第二阶段"></a>第二阶段</h1><p>零基础的话做这个阶段的实验是真的折磨，刚开始配环境就折腾了很久但也还好，之后开始看书，很多的知识点都是没接触过的，从批处理的操作和特权级的切换到分时多任务系统的构建，然后动态内存与页表的定义，最后再到进程的管理。最开始的路最为难走，第3章是最开始的实验，同样也包含了前三章的知识，我花了很长时间才弄清除整体代码的运行流程，实现的功能确实也不难，前提是搞懂整体框架。然后第四章最基本的要求虚实地址转换我就理解了很久很久，因为对语法的不够熟悉，我对数组及内部地址的操作都写了很久都没有成功。第四章最后花了5，6天才解决，反而是第5章一下就做好了。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>通过这次训练营，我学到了很多的操作系统的知识，也培养了各种能力。虽然实验现在我只做好了前面三个，但我感觉已经有了对整体的基本认知，我会在之后的时间把实验补完并认真完成实习的内容。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2023/11/03/blog-rcore-ctzsm/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2023/11/03/blog-rcore-ctzsm/" class="post-title-link" itemprop="url">blog-rcore-ctzsm</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-11-03 21:42:13" itemprop="dateCreated datePublished" datetime="2023-11-03T21:42:13+00:00">2023-11-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-05-18 13:08:58" itemprop="dateModified" datetime="2024-05-18T13:08:58+00:00">2024-05-18</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Stage-1-Rustling"><a href="#Stage-1-Rustling" class="headerlink" title="Stage 1 (Rustling)"></a>Stage 1 (Rustling)</h1><p>I tried to learn Rust programming language many times, but it was from start to give up every time. Mostly because I never used it in my real job or other personal works. The recent one was trying to implement a vulkan game engine with Rust, but I do have other stuff to do, so that was never finished.</p>
+<p>I spent about 3 nights to finish the rustling problem set, it was fun. For the first half, it was a refresh to my already rusty Rust memory. I did learn something different during the second part. It was indeed engaging. The compiler message is a very powerful tool in general, Many times I just need to follow what the compiler said to answer the question.  I did have to Google a lot and consult The Book and the official Rust lang document.</p>
+<p>With these practices, I started to get used to Rust, I wouldn’t say I am fully equipped comparing with my C++ and Java skill, but I think it is a good start.</p>
+<h1 id="Stage-2-Lab"><a href="#Stage-2-Lab" class="headerlink" title="Stage 2 (Lab)"></a>Stage 2 (Lab)</h1><h2 id="Lab-1"><a href="#Lab-1" class="headerlink" title="Lab 1"></a>Lab 1</h2><p>After setting up the environment, I realized that I had read the tutorial book before, but just brief. It was probably because I followed an OS course from Nanjing University taught by Yanyan Jiang on Bilibili. I even have a qemu installed in my WSL2. In general, the guide book is very readable. I followed the book to understand the code structure and WeChat group helped some of the common questions on newer version of qemu, which saved my a lot of time.</p>
+<p>However, 2 weeks are super short, I can’t finish reading the first two chapters to understand all the details and I have to start chapter 3 right away to meet the deadline. Fortunately the actual lab isn’t very hard. The first lab is just to implement <code>sys_task_info</code>, there is a big hint that the <code>TaskControlBlock</code> has a <code>TaskStatus</code> field, we also have that in <code>TaskInfo</code> struct, I immediately realized that we just need replace that field with the <code>TaskInfo</code> struct type. The rest of the work is fairly straightfoward.</p>
+<h2 id="Lab-2"><a href="#Lab-2" class="headerlink" title="Lab 2"></a>Lab 2</h2><p>This lab is indeed harder than the previous one, again I didn’t have time to read the book in a great detail, so I had to make a guess sometimes. But fortunately the code itself is very readable as well, I can find all the info I need in the code. The first hint I get is the <code>translated_byte_buffer()</code> function, which reminds me <code>memcpy</code> in C/C++, if I can write a function to convert everything to a byte array, I then can use <code>translated_byte_buffer()</code> with that to easily copy data from kernel space to user space. That’s exactly what I did in my code to solve this.</p>
+<p>The second part is <code>mmap</code> and <code>munmap</code>, there are many restrictions on the params, which simplied the whole story. I am happy to see this so I can pass the test cases, but wondering how a real world OS implements them.</p>
+<h2 id="Lab-3"><a href="#Lab-3" class="headerlink" title="Lab 3"></a>Lab 3</h2><p>I spent more time than before to read chapter 5, which didn’ help me a ton in the lab, but I still think that is worth because it provides me some details about how this particular OS is designed.</p>
+<p>I was planning to rewrite all of lab 2 and lab 1 requirements again, but I don’t have that time, so I spent about 1 hour to do cherry-pick from ch4. The <code>spawn</code> part was easy if we understood how <code>fork</code> and <code>exec</code> work.</p>
+<p>The <code>stride</code> part is also not too hard since the problem statement is clear about what I need to do. I did have some bugs (and I probably still have some bugs even I passed the test cases), it was not too hard to debug them. I ended with using a binary heap to implement the algorithm.</p>
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p>That’s all I did so far, I wish I can finish the rest two labs soon, 2 weeks are super tight, not sure why this was arranged in this way, the curves in stage 1 and stage 2 are completely different. But maybe that was on purpose, so everyboday has to find their way out, I did have fun and finally had time to get my hands on code.</p>
+<p>Big thanks to all the hosts and staff!</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2023/11/03/2023%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93%E6%8A%A5%E5%91%8A-lyoh33/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2023/11/03/2023%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93%E6%8A%A5%E5%91%8A-lyoh33/" class="post-title-link" itemprop="url">2023开源操作系统第二阶段总结报告-lyoh33</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-11-03 21:14:34" itemprop="dateCreated datePublished" datetime="2023-11-03T21:14:34+00:00">2023-11-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-05-18 13:08:58" itemprop="dateModified" datetime="2024-05-18T13:08:58+00:00">2024-05-18</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>此次训练营需要依照提供的os代码框架，完成一些练习，主要是补全函数的实现，整体难度并不大。比较困难的点，一是实验环境的配置，对git,qemu,makefile,cargo等工具的陌生，很容易导致无法理解工作环境。例如实验要拷贝的仓库并不是按照官方仓库的readme里的<code>git clone https://github.com/LearningOS/rCore-Tutorial-Code-2023A.git</code>，而是自己的作业仓库，ci-user这个测试文件夹应与os文件夹平级；二是刚上手代码框架时容易迷失在繁多的文件和文件夹里；三是部分代码比较晦涩，比如涉及到trap的部分，而这些对于理解整个操作系统是至关重要的。</p>
+<p>练习中的几个实验只要求实现基本的功能，只要熟悉框架代码就很容易写出来，部分更困难的部分并没有作为必做的练习，比如实现写时复制、缺页异常等等。某些关键细节比如开启分页并不要求自己填写，因此，完成这次训练营只能算是一张入门系统的入场券。</p>
+<p>不同于xv6，rcore的实验框架是递进式的，从裸机应用到批处理系统到多道程序系统，相当后面才有了文件系统。我对这种安排是否是合适保持一点疑问，因为链接时陌生的，在有文件系统前把用户应用链接到内核反而增添了很多复杂性。我觉得rcore的框架像是把用c翻译成的rust代码写成的，缺乏一些用rust重写的必要性，反而增添了很多复杂性。比如虚拟内存那章的MapArea等抽象我琢磨了很久，但是由c写成的xv6的虚拟内存代码我却很容易看懂，直至现在我依然觉得这种抽象是不必要的(也可能是个人水平欠缺，尚不能理解)。rcore的多进程、多线程也是仿linux的经典设计，这部分能否更有一些rust特色，比如让语言自身来管理一部分并发的功能呢？我希望今后能探索这部分的答案</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2023/11/03/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E4%B8%80%E4%BA%8C%E9%98%B6%E6%AE%B5%E6%8A%A5%E5%91%8A-%E7%BD%97%E7%86%99/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2023/11/03/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E4%B8%80%E4%BA%8C%E9%98%B6%E6%AE%B5%E6%8A%A5%E5%91%8A-%E7%BD%97%E7%86%99/" class="post-title-link" itemprop="url">操作系统训练营一二阶段报告-罗熙</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-11-03 20:54:04" itemprop="dateCreated datePublished" datetime="2023-11-03T20:54:04+00:00">2023-11-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-05-18 13:08:58" itemprop="dateModified" datetime="2024-05-18T13:08:58+00:00">2024-05-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/report/" itemprop="url" rel="index"><span itemprop="name">report</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="第一阶段总结"><a href="#第一阶段总结" class="headerlink" title="第一阶段总结"></a>第一阶段总结</h2><p>在第一阶段，我主要进行的工作是学习Rust语言，同时也了解学习了一些RISC-V指令集的知识。</p>
+<p>我对Rust的学习主要参考了<a href="https://course.rs/about-book.html" target="_blank" rel="noopener">Rust语言圣经</a>。不过，由于时间问题，我只阅读了其中的知识点部分，还未阅读过实战项目部分。由于之后需要进行系统编程，我也粗略地看了一下<a href="https://nomicon.purewhite.io/" target="_blank" rel="noopener">Rust 秘典（翻译版本）</a>。</p>
+<p>学习这些知识之后，完成该阶段的Rustlings任务比较简单。只有少数几道题涉及的知识点较冷门，查询对应知识点时花费了一些时间。</p>
+<h2 id="第二阶段总结"><a href="#第二阶段总结" class="headerlink" title="第二阶段总结"></a>第二阶段总结</h2><h3 id="ch0-ch2"><a href="#ch0-ch2" class="headerlink" title="ch0 ~ ch2"></a>ch0 ~ ch2</h3><p>这几章的实践内容主要是配置实验环境。按照书上的操作，配置起来比较顺利。为了之后开发更方便，我也完成了vscode通过ssh远程登录虚拟机的配置。</p>
+<p>第1、2章的学习内容主要是对特权级切换过程和rcore的结构有一个基本的了解，（和之后相比）我觉得算是较为简单的一章。</p>
+<h3 id="ch3"><a href="#ch3" class="headerlink" title="ch3"></a>ch3</h3><p>本章需要实现多道程序和分时多任务。这一章对我来说是一个难点，因为任务切换、特权级切换的过程比ch2更加复杂了。好在最后还是大致理解了这一过程。</p>
+<p>本章的实验是第一个实验，（和之后相比）算是比较简单的，但因为当时我对系统架构还不甚熟悉，该实验对当时的我来说还是有难度的。</p>
+<p>我在任务管理块<code>TaskControlBlock</code>中增加了记录系统调用次数的字段<code>syscall_times</code>和记录程序开始时间的字段<code>start_time</code>。将这两个字段初始化，并分别在任务开始时和进入系统调用时更新这两个字段。之后，我实现了系统调用处理函数<code>sys_task_info</code>，将需要更新的<code>TaskInfo</code>指针传递到<code>TASK_MANAGER</code>内部进行处理，让<code>TASK_MANAGER</code>根据TCB中新增的字段更新<code>TaskInfo</code>的相应字段。</p>
+<h3 id="ch4"><a href="#ch4" class="headerlink" title="ch4"></a>ch4</h3><p>本章学习rcore对于地址空间的实现。在阅读过程中，我对本章内容还有一些不理解之处，之后在开发的过程中也慢慢熟悉了。</p>
+<p>从本章开始，需要前向兼容。当时我还不知道<code>git cherry-pick</code>这个命令，因此只能将上一章的代码复制粘贴过来。同时，我在实现两个新的系统调用的时候，原本想把功能代码都写在系统调用函数内，因此也在函数内获取了系统很多资源的引用。结果，我编写的代码怎么修改也通不过Rust编译器的引用检查和生命周期检查，只能重写。这次，我将和不同数据结构有关的功能代码封装成那些数据结构对应的方法，让系统调用函数去使用这些方法，这才通过了编译。这一经历也让我养成了更好的编码习惯。</p>
+<p>我重写了<code>sys_get_time</code>和<code>sys_task_info</code>函数，使它们恢复正常功能。为了做到这点，我编写了<code>map_user_va_to_pa</code>函数，将用户空间的虚拟地址转化为物理地址。通过该函数，我将<code>sys_get_time</code>和<code>sys_task_info</code>函数的输入的指针参数进行了地址变换，再完成之前的工作。</p>
+<p>我实现了<code>mmap</code>和<code>munmap</code>系统调用。它们首先检查输入参数的合法性，再通过<code>TASK_MANAGER</code>获得当前进程的pcb，进而获得当前进程的用户地址空间。之后，调用我实现的地址空间的<code>map_va_range</code>和<code>unmap_va_range</code>方法，完成对应的操作。</p>
+<h3 id="ch5"><a href="#ch5" class="headerlink" title="ch5"></a>ch5</h3><p>本章学习rcore的进程管理。有了前几章的铺垫，这章我感觉学起来较为轻松。</p>
+<p>在本章，我学到并使用了<code>git cherry-pick</code>命令。由于这一章涉及进程的代码结构变换较大，而我之前修改的代码也有很多涉及进程TCB，因此出现了大量的合并冲突，其中一部分还只能手动解决。我花费了一些时间解决这些冲突，并且一边解决一边尝试编译，看能否正常运行。</p>
+<p>我实现了<code>spawn</code>系统调用，根据目标程序新建子进程，并且维护它和调用进程的父子关系。参考<code>fork</code>和<code>exec</code>的代码，该系统调用较容易实现。我实现了stride调度算法，在TCB的inner字段中增加了记录stride调度算法所需的数据项<code>priority</code>和<code>stride</code>。增加了设置进程优先级的系统调用<code>set_priority</code>。最后，重写了<code>TaskManager::fetch</code>函数，让其每次选取<code>stride</code>值最小的进程进行调度，并且维护被调度的进程的<code>stride</code>值。</p>
+<p>时间关系，目前只完成了这些实验。在晋级之后，我也会继续对rcore的学习，继续完成实验。例如，我目前阅读完了第6章，准备开始第6章的实验。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2023/11/03/rcore-2023-autumn-summary-xianyuguai/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2023/11/03/rcore-2023-autumn-summary-xianyuguai/" class="post-title-link" itemprop="url">rcore-2023-autumn-summary-xianyuguai</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-11-03 19:40:28" itemprop="dateCreated datePublished" datetime="2023-11-03T19:40:28+00:00">2023-11-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-05-18 13:08:58" itemprop="dateModified" datetime="2024-05-18T13:08:58+00:00">2024-05-18</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="rcore秋季训练营总结"><a href="#rcore秋季训练营总结" class="headerlink" title="rcore秋季训练营总结"></a>rcore秋季训练营总结</h1><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>之前有听说过rcore，然后在发现群友发了这次的活动，<br>刚好又因为现在是无业，就想着说报个名写写看，然后就报名<br>了</p>
+<h2 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h2><p>rcore的实验内容主要是5个Lab，是二阶段的主要任务</p>
+<p>大概就是这样，下面就是一些个人的碎碎念</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/blog/2023/11/03/rcore-2023-autumn-summary-xianyuguai/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2023/11/03/2023%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93%E6%8A%A5%E5%91%8A-ybbybbybbybb/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2023/11/03/2023%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93%E6%8A%A5%E5%91%8A-ybbybbybbybb/" class="post-title-link" itemprop="url">2023开源操作系统训练营第二阶段总结报告-ybbybbybbybb</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-11-03 15:56:40" itemprop="dateCreated datePublished" datetime="2023-11-03T15:56:40+00:00">2023-11-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-05-18 13:08:58" itemprop="dateModified" datetime="2024-05-18T13:08:58+00:00">2024-05-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/report/" itemprop="url" rel="index"><span itemprop="name">report</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="2023秋冬季rCore训练营报告"><a href="#2023秋冬季rCore训练营报告" class="headerlink" title="2023秋冬季rCore训练营报告"></a>2023秋冬季rCore训练营报告</h1><h1 id="ch0-amp-ch1-amp-ch2"><a href="#ch0-amp-ch1-amp-ch2" class="headerlink" title="ch0 &amp; ch1 &amp; ch2"></a>ch0 &amp; ch1 &amp; ch2</h1><ul>
+<li>跟这 ch0 进行了一些环境配置，然后边看 ch1 边找着文档一起移除标准库依赖，构建用户态执行环境，构建裸机执行环境，并用 qemu 和 gdb 模拟和监测程序运行的状态，让我对什么是操作系统，操作系统内核运行的环境的有了一个较为深刻的理解。而阅读 ch2，令我理解了早期的操作系统是如何来处理程序的。</li>
+</ul>
+<h1 id="ch3"><a href="#ch3" class="headerlink" title="ch3"></a>ch3</h1><ul>
+<li>ch3 中我学习了多道程序的放置与加载，任务切换，如何管理多道程序。然后在练习中为了实现 sys_task_info 我在原本 TaskControlBlock 的基础上添加了 task_syscall_times 数组和 first_start_time 字段来记录获取 taskinfo 所需信息。在 syscall 中调用自己封装的 add_cuurent_task_syscall_times 来实现对 task_syscall_times 记录更新。而对于 first_start_time，我在程序第一次运行时更新来记录，使得在调用 sys_task_info 时能够准确获得程序的运行时长。</li>
+</ul>
+<h1 id="ch4"><a href="#ch4" class="headerlink" title="ch4"></a>ch4</h1><ul>
+<li>ch4 中我详细学习了虚拟内存与 SV39 多级页表机制。在练习中我重写了 sys_get_time，我利用 get_mut 封装了一个将当前任务指定地址usize大小的数据修改的函数，然后将Timeval分为两个指向值的指针传入函数进行修改，以修正ti指向的地址为虚拟地址的问题，并避免了两个值在两个不同虚拟地址的情况，而对与 sys_task_info 我借鉴了前面 sys_get_time 的写法，利用已有的 translated_byte_buffer 将结构体分片为 u8 数组进行取址修改。而对于要求实现 mmap 与 munmap，我先检查函数参数是否出错和指定虚拟页是否有映射，然后调用 insert_framed_area / shrink_to 来实现要求的功能（虽然我认为单纯使用 shrink_to 有点小问题）。</li>
+</ul>
+<h1 id="ch5"><a href="#ch5" class="headerlink" title="ch5"></a>ch5</h1><ul>
+<li>ch5 我学习了进程管理机制的实现。在练习中我将前面的功能全部移植了过来（虽然后来发现有些好像不用），对于 spawn 我参考了 fork(exec())，只是新建 TCB 时改为直接 TaskControlBlock::new(elf_data)，然后修改其中的 parent。对于 stride 调度算法，我在 TaskControlBlockInner 中添加 stride 与 pass 字段，set_prio 时 pass改为 BIG_STRIDE / prio。</li>
+</ul>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ul>
+<li>我跟着 rCore-Tutorial-Book-v3 3.6.0-alpha.1 文档进行了第二阶段的实验，感觉收获还是比较大的，就是环境配置等前置我感觉还是有些混乱，没有一个比较好的教程，希望可以添加一个。最后，感谢老师能供提供一个这么好的平台。 </li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2023/11/03/2023%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93%E6%8A%A5%E5%91%8A-%E9%83%91%E5%A5%BD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2023/11/03/2023%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93%E6%8A%A5%E5%91%8A-%E9%83%91%E5%A5%BD/" class="post-title-link" itemprop="url">2023开源操作系统训练营第二阶段总结报告-郑好</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-11-03 15:56:06" itemprop="dateCreated datePublished" datetime="2023-11-03T15:56:06+00:00">2023-11-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-05-18 13:08:58" itemprop="dateModified" datetime="2024-05-18T13:08:58+00:00">2024-05-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/report/" itemprop="url" rel="index"><span itemprop="name">report</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>感谢老师和主教们提供的这么一次宝贵的学习操作系统的课程，不管是老师们上课时的专业程度，还是文档的详细度，或是练习的代码，都体现出了老师们对于这门课付出的大量的时间和心血。在第一阶段的学习中，我了解和熟悉了Rust语言的使用方法，并在rustlings中尝试解决各种问题。当然，rust语言也并没有那么容易上手，加上时间有限，在学习第一阶段时候我对rust语言本身还是只有一个概念的雏形，有些rust的语法特性由于缺乏实践没有真正掌握。当然，在第二阶段的学习中，我开始真正尝试使用rust实现系统调用，同时努力学习吸收老师们的代码和思路，不仅能够更加熟练的使用rust语言，还对操作系统有了更清晰的概念。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/blog/2023/11/03/2023%E5%BC%80%E6%BA%90%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%AE%AD%E7%BB%83%E8%90%A5%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93%E6%8A%A5%E5%91%8A-%E9%83%91%E5%A5%BD/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://rcore-os.github.io/blog/2023/11/03/rCore%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A-huaji/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/blog/images/avatar.gif">
+      <meta itemprop="name" content="rcore-os Group">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="rcore-os Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/blog/2023/11/03/rCore%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A-huaji/" class="post-title-link" itemprop="url">rCore学习报告-huaji</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-11-03 15:15:19" itemprop="dateCreated datePublished" datetime="2023-11-03T15:15:19+00:00">2023-11-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-05-18 13:08:58" itemprop="dateModified" datetime="2024-05-18T13:08:58+00:00">2024-05-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/catogory/" itemprop="url" rel="index"><span itemprop="name"><catogory></span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="Rust语言学习"><a href="#Rust语言学习" class="headerlink" title="Rust语言学习"></a>Rust语言学习</h2><ul>
+<li><p>Rust 编程语言是一个专注于安全、并发和实用性的系统编程语言,语法简洁先进</p>
+</li>
+<li><p>内存安全：无需垃圾回收器即可保证内存安全。</p>
+</li>
+<li><p>所有权系统：所有权、借用和生命周期是 Rust 独有的特性，用于在编译时管理内存。</p>
+</li>
+<li><p>类型系统：Rust 拥有强类型系统和类型推导。</p>
+</li>
+<li><p>并发：Rust 通过所有权模型来避免数据竞争。</p>
+</li>
+<li><p>构建系统: Rust拥有强大且易用的构建系统和包管理器cargo</p>
+</li>
+<li><p>第三方库: 强大的生态系统支持，可以找到几乎任何类型的库。</p>
+</li>
+<li><p>学习资源丰富,做完Rustlings的一系列小练习可以了解rust的各个方面,有官方中文文档</p>
+</li>
+</ul>
+<h1 id="rcore"><a href="#rcore" class="headerlink" title="rcore"></a>rcore</h1><p>课程很硬核,实验较简单</p>
+<h2 id="实验一"><a href="#实验一" class="headerlink" title="实验一"></a>实验一</h2><p>实验一让我了解了rcore基本的进程调度实现,以及RV64汇编语法,寄存器特性,调用约定,RISC-V的指令集很简洁,总共就100多条指令.</p>
+<h2 id="实验二"><a href="#实验二" class="headerlink" title="实验二"></a>实验二</h2><p>实验二让我了解了以下内容</p>
+<ul>
+<li><p>SV39分页机制: 开启SV39分页后所有的内存访问都变成虚拟地址形式,通过MMU将虚拟地址转成物理地址</p>
+</li>
+<li><p>rcore内存管理: rcore为所有物理地址做了一个恒等映射,可以通过虚拟地址访问所有物理地址,先实现了一个分配物理页帧的<code>FrameAllocater</code>,然后实现了一个<code>MemorySet</code>来实现分配地址空间和地址空间对应的物理内存</p>
+</li>
+<li><p>双页表OS: 系统为用户态专门设计了一张没有内核模式代码的页表,内核模式区域只包含了trap入口代码,用户态发生trap就跳到Trampoline切换到内核态页表,内核态返回用户态的时候又切换回用户态的页表,这样子做每次trap会多出两次切页表导致TLB清空的性能消耗</p>
+<p>为了防范可能出现的类似”幽灵熔断”漏洞的攻击,牺牲一些性能来换安全性还是有必要的.</p>
+</li>
+</ul>
+<h2 id="实验三"><a href="#实验三" class="headerlink" title="实验三"></a>实验三</h2><p>实验三学习了rcore的进程管理机制,fork,exec的实现,Elf映射到内存的过程,以及支持进程优先级的stride调度算法</p>
+<p>fork: 按照一个父进程创建一个子进程,子进程拷贝父进程的地址空间</p>
+<p>exec: 清空进程的地址空间来执行新的可执行文件</p>
+<p>stride调度算法: 支持优先级的进程调度算法</p>
+<p>原理是给每个进程添加priority和stride的成员,调度器每次都挑选stride最小的进程来执行,进程执行一个时间片就加上一个大常量BIG_STRIDE除以priority的值</p>
+<p>priority要求必须&gt;=2,因为如果=0的话除法就会发生异常,=1的话就不支持溢出处理,&gt;=2的情况下<code>STRIDE_MAX – STRIDE_MIN &lt;= BigStride / 2</code>,这样可以做溢出判断</p>
+<h2 id="实验四"><a href="#实验四" class="headerlink" title="实验四"></a>实验四</h2><p>实验四学习了easyfs文件系统的实现,这个文件系统可以以模块的形式添加进内核里.</p>
+<p>这个内核模块的开发流程可以在用户模式做测试,测试稳定之后放到系统内核里面,这样子做有很多好处</p>
+<ol>
+<li>让内核设计更模块化</li>
+<li>可以把这个文件系统模块放到用户态,如果以后要实现一个用户态解析这个OS文件系统的工具,比如ch6中的<code>easy-fs-fuse</code>可以在测试环境的用户态生成一个fs.img给虚拟机内的操作系统使用</li>
+</ol>
+<p>easy-fs的实现:</p>
+<p>把磁盘的线性空间分块,每个块大小为常量<code>BLOCK_SZ</code></p>
+<p>第一个块的信息是超级块,包含文件系统的标识,大小,inode区域,数据分布信息</p>
+<p>inode用来描述文件和目录,根目录的inode编号是0,相当于linux中的<code>/</code>根目录,通过根目录来实现索引文件系统中的所有文件</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/blog/page/25/"><i class="fa fa-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/25/">25</a><span class="page-number current">26</span><a class="page-number" href="/blog/page/27/">27</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/39/">39</a><a class="extend next" rel="next" href="/blog/page/27/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+
+
+
+        </div>
+        
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">rcore-os Group</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/blog/lib/anime.min.js"></script>
+
+<script src="/blog/js/utils.js"></script>
+
+<script src="/blog/js/motion.js"></script>
+
+
+<script src="/blog/js/schemes/muse.js"></script>
+
+
+<script src="/blog/js/next-boot.js"></script>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
